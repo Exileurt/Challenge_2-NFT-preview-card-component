@@ -26,6 +26,18 @@ body
     height: 350px;
     border-radius: 10px;
 }
+#image:hover
+{
+    opacity: 50%;
+}
+#image1
+{
+    background: url(images/icon-view.svg)no-repeat center;
+    background-color: hsl(178, 100%, 50%);
+    width: 350px;
+    height: 350px;
+    border-radius: 12px;
+}
 h1
 {
     color: white;
