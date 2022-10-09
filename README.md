@@ -1,2 +1,2 @@
 # Challenge_2-NFT-preview-card-component
-https://github.com/Exileurt/Challenge_2-NFT-preview-card-component/blob/main/design/desktop-preview.jpg?raw=true
+https://raw.githubusercontent.com/Exileurt/Challenge_2-NFT-preview-card-component/main/design/desktop-preview.jpg
