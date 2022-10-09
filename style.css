@@ -112,3 +112,10 @@ p
 {
     color: hsl(178, 100%, 50%);
 }
+@media screen and (max-width: 375px)
+{
+    #box
+    {
+        margin-top: 0%;
+    }
+}
