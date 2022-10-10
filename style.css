@@ -1,120 +1,142 @@
 @font-face {
-    font-family: 'Outfit';
+    font-family: "outfit";
     src: url(Font/Outfit-VariableFont_wght.ttf);
 }
-body
-{
-    display: flex;
-    justify-content: center;
-    flex-direction: flex;
-    font-family: 'Outfit';
+
+body {
+    font-family: "outfit", serif;
     background-color: hsl(217, 54%, 11%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#box
-{
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.card {
+    max-width: 310px;
+    height: 510px;
     background-color: hsl(216, 50%, 16%);
-    width: 350px;
-    height: 628px;
-    margin-top: 30%;
-    border-radius: 13px;
-    box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.3);
-    padding: 25px;
-}
-#image
-{
-    width: 350px;
-    height: 350px;
-    border-radius: 10px;
-}
-#image:hover
-{
-    opacity: 50%;
-}
-#image1
-{
-    background: url(images/icon-view.svg)no-repeat center;
-    background-color: hsl(178, 100%, 50%);
-    width: 350px;
-    height: 350px;
     border-radius: 12px;
+    padding: 20px;
 }
-h1
-{
+
+.image {
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    height: 270px;
+}
+
+.image .image_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: rgba(0, 255, 234, 0.5);
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image_overlay img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.image:hover .image_overlay {
+    opacity: 1;
+}
+.card .image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details_card{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.details_card .title{
+    font-size: 18px;
     color: white;
-    font-size: 25px;
-    font-weight: 600;
-    padding-top: 10px;
 }
-h1:hover
-{
+
+.details_card .title:hover {
     color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
-p
-{
-    color:hsl(215, 51%, 70%);
-    font-size: 21px;
+
+.details_card .description{
+    padding-top: 1rem;
+    color: hsl(215, 51%, 70%);
+    font-size: 14;
     font-weight: 300;
 }
-#price
-{
-    color: hsl(178, 100%, 50%);
-    font-size: 18px;
-    font-weight: 500;
+
+.eth_price {
+    display: flex;
 }
-#eth
-{
-    vertical-align: -12%;
-    padding-top: 10px;
+
+.eth_price .price{
+    color: hsl(178, 100%, 50%);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.eth_price .day_left {
+    color: hsl(215, 51%, 70%);
+    margin-left: 7rem;
+}
+
+.line {
+    background-color: hsl(215, 51%, 70%);
+    width: 100%;
+    height: 1px;
+    margin-top: 1rem;
+}
+
+.creator {
+    display: flex;
+    font-size: 15px;
+    margin-top: 1rem;
+    padding-top: 1rem;
 
 }
-#remaining
-{
-    position: relative;
-    left: 140px;
-    color: hsl(215, 51%, 70%);
-    font-size: 18px;
-    font-weight: 400;
-}
-#clock
-{
-    vertical-align: -19%;
-    height: 20px;
-}
-#line
-{
-    flex-direction: column;
-    background-color: hsl(215, 32%, 27%);
-    height: 2px;
-    width: 350px;
-    margin-top: 30px;
-}
-#creator img
-{
-    border: solid white 2px;
+
+.creator .avatar {
+    width: 12%;
+    border: solid 1px white;
     border-radius: 50%;
-    width: 35px;
-    margin-top: 20px;
 }
-#clr1
-{
-    margin-left: 12px;
+
+.creator .creation  {
     color: hsl(215, 51%, 70%);
-    font-size: 18px;
-    vertical-align: 50%;
+    margin-left: 10px;
+    padding-top: 5px;
 }
-#clr2
-{
+
+.creator .name {
     color: white;
-    font-size: 18px;
-    vertical-align: 50%;
+    padding-top: 5px;
 }
-#clr2:hover
-{
+
+.creator .name:hover {
     color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
-@media screen and (max-width: 375px)
-{
-    #box
+
+@media screen and (max-width: 375px) {
+    .card
     {
         margin-top: 0%;
     }
